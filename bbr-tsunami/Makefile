@@ -11,6 +11,7 @@ define KernelPackage/$(PKG_NAME)
 	TITLE:=Modified bbr tcp congestion control
 	DEPENDS:=@LINUX_4_14
 	FILES:=$(PKG_BUILD_DIR)/tcp_bbr_tsunami.ko
+	AUTOLOAD:=$(call AutoLoad,99,tcp-bbr-tsunami)
 	KCONFIG:=
 endef
 
